@@ -1,6 +1,8 @@
 #include <iostream>
+#include "gates/AGate.h"
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    AGate gate("AND");
+    std::cout << gate << std::endl;
     return 0;
 }

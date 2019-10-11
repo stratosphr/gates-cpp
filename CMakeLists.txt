@@ -3,4 +3,4 @@ project(gates)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(gates main.cpp)
+add_executable(gates main.cpp gates/AGate.cpp gates/AGate.h)
