@@ -1,13 +1,13 @@
 #include <iostream>
 #include "gates/AGate.h"
-
-bool test(std::vector<AGate> inputs) {
-    return false;
-}
+#include "gates/True.h"
+#include "gates/False.h"
+#include "gates/And.h"
 
 int main() {
-    AGate and1("AND", {}, test);
+    True true1;
+    False false1;
+    And and1({&false1, &true1});
     std::cout << and1 << std::endl;
-    std::cout << and1.computeOutput() << std::endl;
     return EXIT_SUCCESS;
 }
