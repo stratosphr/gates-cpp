@@ -6,6 +6,8 @@
 #include <utility>
 #include "AGate.h"
 
+AGate::AGate(std::string name) : name(std::move(name)) {}
+
 const std::string &AGate::getName() const {
     return name;
 }
@@ -13,6 +15,3 @@ const std::string &AGate::getName() const {
 std::ostream &operator<<(std::ostream &out, const AGate &gate) {
     return out << gate.getName();
 }
-
-AGate::AGate(std::string name) : name(std::move(name)) {}
-

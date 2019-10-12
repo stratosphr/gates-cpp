@@ -4,5 +4,5 @@
 int main() {
     AGate gate("AND");
     std::cout << gate << std::endl;
-    return 0;
+    return EXIT_SUCCESS;
 }
