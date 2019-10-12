@@ -6,16 +6,22 @@
 #define GATES_AGATE_H
 
 #include <iosfwd>
+#include <vector>
 
 class AGate {
 
 private:
     std::string name;
+    std::vector<AGate> inputs;
+
+    bool (&output)(std::vector<AGate> inputs);
 
 public:
-    explicit AGate(std::string name);
+    explicit AGate(std::string name, std::vector<AGate> inputs, bool (&output)(std::vector<AGate> inputs));
 
-    const std::string &getName() const;
+    std::string getName() const;
+
+    bool computeOutput() const;
 
     friend std::ostream &operator<<(std::ostream &out, const AGate &gate);
 
