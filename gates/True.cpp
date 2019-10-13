@@ -5,7 +5,7 @@
 #include "True.h"
 #include <iostream>
 
-True::True() : AGate(std::string("True"), {}) {
+True::True() : AGate("True", {}) {
 }
 
 bool True::computeOutput() const {

@@ -4,7 +4,7 @@
 
 #include "False.h"
 
-False::False() : AGate(std::string("False"), {}) {
+False::False() : AGate("False", {}) {
 
 }
 

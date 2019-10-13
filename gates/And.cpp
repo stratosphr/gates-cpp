@@ -8,7 +8,7 @@
 #include <numeric>
 #include <algorithm>
 
-And::And(std::vector<AGate *> inputs) : AGate(std::string("And"), std::move(inputs)) {
+And::And(std::vector<AGate *> inputs) : AGate("And", std::move(inputs)) {
 
 }
 
